@@ -90,7 +90,6 @@ const slideshow = new Slideshow(posts, 'slideshow');
 // ============
 
 // CommentModule.js
-
 class CommentModule {
     constructor(containerId) {
         this.comments = comments; // Using imported comment data
@@ -99,6 +98,7 @@ class CommentModule {
         this.createComments();
         this.startCommentUpdate();
         this.initSwipeListeners();
+        this.initMouseSwipeListeners();
     }
 
     createComments() {
@@ -143,6 +143,7 @@ class CommentModule {
         let startX = 0;
         let endX = 0;
 
+        // Mobile swipe events
         this.container.addEventListener('touchstart', (e) => {
             startX = e.touches[0].clientX;
         });
@@ -150,6 +151,33 @@ class CommentModule {
         this.container.addEventListener('touchend', (e) => {
             endX = e.changedTouches[0].clientX;
             this.handleSwipe(startX, endX);
+        });
+    }
+
+    initMouseSwipeListeners() {
+        let isMouseDown = false;
+        let startX = 0;
+
+        // Desktop swipe events
+        this.container.addEventListener('mousedown', (e) => {
+            isMouseDown = true;
+            startX = e.clientX;
+        });
+
+        this.container.addEventListener('mousemove', (e) => {
+            if (isMouseDown) {
+                const endX = e.clientX;
+                this.handleSwipe(startX, endX);
+                startX = endX; // Reset the startX for smooth movement
+            }
+        });
+
+        this.container.addEventListener('mouseup', () => {
+            isMouseDown = false;
+        });
+
+        this.container.addEventListener('mouseleave', () => {
+            isMouseDown = false; // In case mouse leaves the area while dragging
         });
     }
 

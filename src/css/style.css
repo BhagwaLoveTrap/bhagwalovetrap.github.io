@@ -30,52 +30,41 @@
 
 .main {
     min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(-45deg, blue, purple);
+
+}
+
+.article {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .blt {
     font-family: 'Arial', sans-serif;
-    /* Use a clean, sans-serif font for easier reading */
     font-size: 16px;
-    /* Default font size, ensures the text isn't too small */
     line-height: 1.6;
-    /* Adequate line spacing to improve readability */
     padding: 20px;
-    /* Space around the text so it doesn't touch the edges */
     margin: 0 auto;
-    /* Center the content */
     max-width: 800px;
-    /* Max width to prevent text from being too wide */
     text-align: left;
-    /* Align text to the left for better readability */
     color: #ffffff;
-    /* Dark text color for good contrast with the background */
-    background: linear-gradient(-45deg, blue, purple);
-    border-radius: 8px;
-    /* Rounded corners for a soft look */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Slight shadow to lift the section off the page */
+    /* background: linear-gradient(-45deg, blue, purple); */
 }
 
-/* For headings inside the .blt section */
 .blt h2 {
     font-size: 24px;
-    /* Larger size for headings */
     font-weight: bold;
-    /* Make headings stand out */
     color: #ffffff;
-    /* Slightly darker shade for headings */
     margin-bottom: 15px;
-    /* Space below the heading */
 }
 
-/* For paragraphs inside .blt */
 .blt p {
     font-size: 16px;
-    /* Ensure paragraphs have the same font size */
     line-height: 1.8;
-    /* Slightly more spacing between lines for better readability */
     margin-bottom: 15px;
-    /* Add space between paragraphs */
 }
 
 /* Optional: Add a responsive font size for mobile screens */

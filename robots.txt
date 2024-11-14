@@ -17,4 +17,4 @@ Allow: /
 Crawl-delay: 10
 
 # Sitemap location for better indexing
-Sitemap: https://bhagwalovetrap.github.io/sitemap.xml
+#Sitemap: https://bhagwalovetrap.github.io/sitemap.xml

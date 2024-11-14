@@ -1,4 +1,4 @@
-import { posts,comments } from "./posts.js";
+import { posts,comments } from "./data.js";
 
 
 class Slideshow {

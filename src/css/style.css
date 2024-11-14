@@ -163,3 +163,77 @@
 .nav-button.right {
     right: 10px;
 }
+
+/* 
+code for comment section
+*/
+
+/* Comment Section Container */
+.comment-section {
+    width: 100%;
+    max-width: 800px; /* Limit the width for a more professional, clean layout */
+    margin: 0 auto; /* Center align the comment section */
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+    background-color: #fafafa; /* Light background for a clean look */
+    border-radius: 10px; /* Slight rounding of corners for a modern feel */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Soft, subtle shadow for depth */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Individual Comment Style */
+.comment {
+    display: none; /* Initially hide all comments */
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.4s ease-out; /* Smooth fade and slide-in effect */
+    padding: 20px;
+    background-color: #fff; /* White background for the comment card */
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    transform: translateY(20px); /* Slightly slide up when the comment appears */
+}
+
+/* Active Comment - Visible and animated */
+.comment.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0); /* Slide in from bottom */
+}
+
+/* Comment Header (Name) */
+.comment h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #333; /* Darker color for the name */
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Comment Text */
+.comment p {
+    font-size: 1rem;
+    color: #555; /* Slightly lighter color for the text */
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Styling for Comment Section on Mobile */
+@media (max-width: 768px) {
+    .comment-section {
+        padding: 15px;
+    }
+
+    .comment {
+        padding: 15px;
+    }
+}
+
+/* Optional: Adding a subtle hover effect for comments */
+.comment:hover {
+    background-color: #f9f9f9; /* Lighten the background on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly enhance the shadow on hover */
+    transform: translateY(-2px); /* Slightly lift the comment on hover */
+    cursor: pointer; /* Indicate interactivity */
+}

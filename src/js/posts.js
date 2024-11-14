@@ -163,4 +163,13 @@ const posts = [
 ];
 
 
-export { posts };
+const comments = [
+    {
+        name: "Razia Sultana",
+        comment: "i love hindu men, nobody can stop me, if you ever try, i will kick you, i left my home, my religion and even i can sacrifice my life for hindu men, because they are our king and we shia muslim women only for them, we shia queens belong to real men who are hindu men so please dear weak muslim boys stay away from me and let me love my kings and let me obedient to them, if you will try to disturb i will call strong kafir jiju who beat you and humilitate you",
+
+    },
+];
+
+
+export { posts, comments };

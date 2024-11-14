@@ -81,3 +81,37 @@
         /* Adjust heading size for mobile */
     }
 }
+
+
+
+.slide {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+}
+
+.active > h2 {
+    padding: 10px;
+    margin:10px;
+}
+
+.post-slide {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s ease-in-out;
+}
+
+.post-slide.active {
+    opacity: 1;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}

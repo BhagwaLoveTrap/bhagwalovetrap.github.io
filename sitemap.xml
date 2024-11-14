@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Home Page -->
+  <url>
+    <loc>https://bhagwalovetrap.github.io/</loc>
+    <lastmod>2024-11-14</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://bhagwalovetrap.github.io/home/about/index.html</loc>
+    <lastmod>2024-11-14</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Privacy Page -->
+  <url>
+    <loc>https://bhagwalovetrap.github.io/home/about/privacy.html</loc>
+    <lastmod>2024-11-14</lastmod>
+    <priority>0.60</priority>
+  </url>
+
+  <!-- Copyright Page -->
+  <url>
+    <loc>https://bhagwalovetrap.github.io/home/about/copyright.html</loc>
+    <lastmod>2024-11-14</lastmod>
+    <priority>0.60</priority>
+  </url>
+
+  <!-- Author Page -->
+  <url>
+    <loc>https://bhagwalovetrap.github.io/home/about/hina.html</loc>
+    <lastmod>2024-11-14</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+</urlset>

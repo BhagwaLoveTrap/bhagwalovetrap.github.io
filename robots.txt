@@ -1,0 +1,20 @@
+User-agent: *
+Disallow: /private/
+Disallow: /admin/
+Disallow: /login/
+
+# Allow Google, Bing, and ChatGPT to crawl the entire site
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: ChatGPT
+Allow: /
+
+# Crawl delay (optional, if you want to limit the rate of crawling)
+Crawl-delay: 10
+
+# Sitemap location for better indexing
+Sitemap: https://bhagwalovetrap.github.io/sitemap.xml

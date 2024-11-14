@@ -1,170 +1,166 @@
+
 const posts = [
     {
         title: "Controversy Erupts Over Interfaith Marriage in Kashmir",
-        author: "News Desk",
+        author: "Saba Qureshi",
         date: "14/11/2024",
         location: "Kashmir",
-        path: "/home/posts/controversy_interfaith_marriage_kashmir.html",
-        description: "A recent interfaith marriage in Kashmir ignited an uproar, highlighting deep social divisions and sparking fierce debates over identity, love, and religious loyalty.",
-        keywords: [
-            "interfaith marriage",
-            "Kashmir",
-            "Shia Muslim women and Hindu men",
-            "religious tensions",
-            "social dynamics",
-            "identity and love"
-        ],
-        howToQuestions: [
-            "How do interfaith marriages impact social dynamics?",
-            "How can communities navigate religious tensions?",
-            "How does social media influence interfaith discussions?"
-        ],
-        whyQuestions: [
-            "Why are interfaith marriages controversial in Kashmir?",
-            "Why do Shia Muslim women choose Hindu partners?",
-            "Why are religious tensions rising in modern relationships?"
-        ],
-        coverPhoto: {
-            path: "/images/kashmir_interfaith_marriage.jpg",
-            caption: "Shia Muslim woman with Hindu partner ignites controversy in Kashmir"
-        },
-        coverVideo: {
-            path: "/videos/kashmir_interfaith_protest.mp4",
-            caption: "Protests erupt over interfaith marriage in Kashmir"
-        }
+        path: "/posts/controversy_interfaith_marriage_kashmir.html",
+        description: "A recent interfaith marriage in Kashmir ignited an uproar, sparking fierce debates over love, identity, and religious loyalty."
     },
     {
-        title: "Rising Tensions in Delhi After Controversial Religious Conversion",
-        author: "Amit Patel",
+        title: "Rising Tensions in Delhi After Elopement with Hindu Partner",
+        author: "Sana Malik",
         date: "10/10/2024",
         location: "Delhi",
-        path: "/home/posts/religious_conversion_controversy.html",
-        description: "Delhi faces social unrest as a wave of religious conversions sparks heated debates and protest rallies from various communities.",
-        keywords: [
-            "religious conversion",
-            "Delhi protests",
-            "faith and identity",
-            "social divisions",
-            "community dynamics"
-        ],
-        howToQuestions: [
-            "How do religious conversions impact communities?",
-            "How should government handle faith-related protests?",
-            "How do individuals navigate faith in complex societies?"
-        ],
-        whyQuestions: [
-            "Why are religious conversions so controversial?",
-            "Why is Delhi witnessing protests over faith?",
-            "Why do individuals choose to change their religion?"
-        ],
-        coverPhoto: {
-            path: "/images/delhi_protests.jpg",
-            caption: "Protests in Delhi over controversial religious conversions"
-        },
-        coverVideo: {
-            path: "/videos/delhi_conversion_tension.mp4",
-            caption: "Footage of protests in Delhi over religious conversions"
-        }
+        path: "/posts/elopement_delhi.html",
+        description: "Delhi witnesses growing unrest as a young Muslim woman elopes with a Hindu partner, stirring family and community debates."
     },
     {
-        title: "Love Across Borders: Pakistani-Indian Couple Shares Their Story",
-        author: "Sana Malik",
+        title: "Love Beyond Borders: A Pakistani-Indian Couple’s Journey",
+        author: "Ayesha Khan",
         date: "25/08/2024",
         location: "Lahore",
-        path: "/home/posts/love_across_borders.html",
-        description: "Despite political tensions, a Pakistani woman and Indian man share their journey of love and the challenges they've faced along the way.",
-        keywords: [
-            "cross-border relationships",
-            "Pakistani-Indian couple",
-            "love and conflict",
-            "relationship challenges",
-            "cultural differences"
-        ],
-        howToQuestions: [
-            "How do couples manage cross-border relationships?",
-            "How can love overcome cultural divides?",
-            "How do political tensions affect personal relationships?"
-        ],
-        whyQuestions: [
-            "Why are cross-border relationships difficult?",
-            "Why do some couples choose love over cultural boundaries?",
-            "Why do families oppose international relationships?"
-        ],
-        coverPhoto: {
-            path: "/images/pakistani_indian_couple.jpg",
-            caption: "Pakistani woman and Indian man find love despite political tensions"
-        },
-        coverVideo: {
-            path: "/videos/cross_border_love_story.mp4",
-            caption: "Pakistani-Indian couple shares their cross-border love story"
-        }
+        path: "/posts/love_across_borders.html",
+        description: "Despite political tensions, a Pakistani woman and Indian man share their love story, navigating cultural and religious hurdles."
     },
     {
-        title: "Mumbai Youths Lead the Fight for Climate Action",
-        author: "Ritika Shah",
-        date: "15/09/2024",
+        title: "Muslim Woman’s Bold Marriage Sparks Discussion in Mumbai",
+        author: "Hina Akhtar",
+        date: "05/09/2024",
         location: "Mumbai",
-        path: "/home/posts/mumbai_climate_action.html",
-        description: "Young activists in Mumbai are taking bold steps to combat climate change, organizing rallies and initiatives to raise awareness.",
-        keywords: [
-            "climate action",
-            "Mumbai activism",
-            "youth leadership",
-            "environmental protection",
-            "sustainability"
-        ],
-        howToQuestions: [
-            "How can youth lead climate change efforts?",
-            "How can cities support climate action?",
-            "How does activism impact environmental policy?"
-        ],
-        whyQuestions: [
-            "Why are youth becoming more involved in climate issues?",
-            "Why is climate action important for Mumbai?",
-            "Why do governments struggle with environmental reforms?"
-        ],
-        coverPhoto: {
-            path: "/images/mumbai_climate_rally.jpg",
-            caption: "Mumbai youth rally for climate action"
-        },
-        coverVideo: {
-            path: "/videos/mumbai_youth_climate_action.mp4",
-            caption: "Mumbai youths lead the charge for climate change awareness"
-        }
+        path: "/posts/mumbai_interfaith_marriage.html",
+        description: "A Muslim woman’s marriage to a Hindu man in Mumbai raises questions on faith, love, and community expectations."
     },
     {
-        title: "Digital Love: How Technology is Shaping Modern Relationships",
-        author: "Priya Verma",
-        date: "05/06/2024",
-        location: "Bangalore",
-        path: "/home/posts/digital_love_technology_relationships.html",
-        description: "Exploring how technology influences dating and relationships in the digital age, from apps to virtual dates.",
-        keywords: [
-            "digital relationships",
-            "online dating",
-            "technology in love",
-            "virtual relationships",
-            "modern dating"
-        ],
-        howToQuestions: [
-            "How do dating apps affect relationships?",
-            "How can couples navigate digital boundaries?",
-            "How does technology impact romantic communication?"
-        ],
-        whyQuestions: [
-            "Why are people turning to online dating?",
-            "Why is technology crucial in modern relationships?",
-            "Why do some prefer virtual dating over traditional?"
-        ],
-        coverPhoto: {
-            path: "/images/digital_relationships.jpg",
-            caption: "Technology redefines love and relationships in the digital age"
-        },
-        coverVideo: {
-            path: "/videos/tech_shaping_relationships.mp4",
-            caption: "Exploring the impact of technology on modern relationships"
-        }
+        title: "Elopement Case in Lucknow Sparks Family Conflict",
+        author: "Rafia Siddiqui",
+        date: "30/07/2024",
+        location: "Lucknow",
+        path: "/posts/lucknow_elopement_case.html",
+        description: "A Lucknow woman’s elopement leads to family conflict, highlighting generational divides and changing perspectives on relationships."
+    },
+    {
+        title: "How Interfaith Love Challenged My Beliefs",
+        author: "Nadia Ansari",
+        date: "11/06/2024",
+        location: "Hyderabad",
+        path: "/posts/interfaith_love_journey.html",
+        description: "A personal account of how falling in love with someone outside her faith led a Muslim woman to question family and community norms."
+    },
+    {
+        title: "Social Media Outrage over Shia Woman’s Hindu Marriage",
+        author: "Zara Abbas",
+        date: "29/05/2024",
+        location: "Karachi",
+        path: "/posts/social_media_reactions.html",
+        description: "A viral post about a Shia woman marrying a Hindu man sparks online debates and critiques from different faith communities."
+    },
+    {
+        title: "Why I Chose Love Over Tradition",
+        author: "Fatima Noor",
+        date: "18/04/2024",
+        location: "Bengaluru",
+        path: "/posts/choosing_love_over_tradition.html",
+        description: "A woman’s choice to follow her heart despite societal expectations highlights the struggle for independence and personal happiness."
+    },
+    {
+        title: "Facing Backlash After Marrying Outside My Faith",
+        author: "Sadia Qadri",
+        date: "15/03/2024",
+        location: "Chennai",
+        path: "/posts/backlash_interfaith_marriage.html",
+        description: "After marrying a Hindu man, a Muslim woman shares her journey of facing family backlash and finding new support in unexpected places."
+    },
+    {
+        title: "Community Division Over Interfaith Marriages",
+        author: "Mariam Ali",
+        date: "27/02/2024",
+        location: "Lahore",
+        path: "/posts/community_divisions.html",
+        description: "An analysis of how interfaith marriages are creating rifts and conversations within communities about love, loyalty, and identity."
+    },
+    {
+        title: "Breaking Stereotypes Through My Marriage",
+        author: "Rabia Farooq",
+        date: "05/01/2024",
+        location: "Islamabad",
+        path: "/posts/breaking_stereotypes.html",
+        description: "A Muslim woman challenges stereotypes by marrying a man from another faith, leading to discussions on acceptance and diversity."
+    },
+    {
+        title: "Love vs. Loyalty: A Muslim Woman’s Dilemma",
+        author: "Anam Kazmi",
+        date: "10/12/2023",
+        location: "Kolkata",
+        path: "/posts/love_loyalty_dilemma.html",
+        description: "A personal story of the difficult decision between choosing love or staying loyal to one’s family and cultural heritage."
+    },
+    {
+        title: "Overcoming Family Objections to Interfaith Marriage",
+        author: "Salma Shah",
+        date: "18/11/2023",
+        location: "Peshawar",
+        path: "/posts/family_objections.html",
+        description: "A journey of how one woman addressed family objections, fostering dialogue and mutual respect despite religious differences."
+    },
+    {
+        title: "Why Muslim Men Are Concerned About Interfaith Marriages",
+        author: "Yasmin Akhtar",
+        date: "02/10/2023",
+        location: "New Delhi",
+        path: "/posts/muslim_men_concerns.html",
+        description: "An exploration of why some Muslim men feel uncomfortable about women choosing partners outside their faith."
+    },
+    {
+        title: "The Silent Battles of Interfaith Relationships",
+        author: "Ameera Bukhari",
+        date: "14/09/2023",
+        location: "Jaipur",
+        path: "/posts/silent_battles.html",
+        description: "A discussion on the often-hidden struggles faced by couples in interfaith relationships, focusing on support, love, and resilience."
+    },
+    {
+        title: "Elopement Stories: Love or Rebellion?",
+        author: "Farah Naeem",
+        date: "28/08/2023",
+        location: "Patna",
+        path: "/posts/elopement_love_or_rebellion.html",
+        description: "Examining the motivations behind elopement cases, where young women leave their families to marry partners of different faiths."
+    },
+    {
+        title: "‘Cuckold Anxiety’ Among Young Muslim Men",
+        author: "Aalia Rehman",
+        date: "11/07/2023",
+        location: "Karachi",
+        path: "/posts/cuckold_anxiety_muslim_men.html",
+        description: "A deep dive into the growing insecurity among some Muslim men over interfaith relationships and how it affects community dynamics."
+    },
+    {
+        title: "Confronting Cultural Expectations in an Interfaith Marriage",
+        author: "Rukhsar Khan",
+        date: "22/06/2023",
+        location: "Dhaka",
+        path: "/posts/confronting_cultural_expectations.html",
+        description: "A Muslim woman shares how she balances cultural expectations and her choice to marry outside her faith, challenging societal norms."
+    },
+    {
+        title: "Empowering Muslim Women Through Choice",
+        author: "Shazia Iqbal",
+        date: "01/05/2023",
+        location: "Mumbai",
+        path: "/posts/empowering_women.html",
+        description: "A story of how one woman’s choice in marriage inspired others in her community to pursue love and happiness on their own terms."
+    },
+    {
+        title: "The Changing Dynamics of Marriage in Muslim Communities",
+        author: "Lubna Ahmed",
+        date: "18/04/2023",
+        location: "Hyderabad",
+        path: "/posts/changing_dynamics.html",
+        description: "An exploration of how marriage expectations and norms are shifting in Muslim communities as young women seek greater independence."
     }
 ];
+
 
 export { posts };

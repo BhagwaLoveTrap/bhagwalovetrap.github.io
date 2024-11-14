@@ -90,6 +90,7 @@ const slideshow = new Slideshow(posts, 'slideshow');
 // ============
 
 // CommentModule.js
+// CommentModule.js
 class CommentModule {
     constructor(containerId) {
         this.comments = comments; // Using imported comment data
@@ -97,7 +98,6 @@ class CommentModule {
         this.currentComment = 0;
         this.createComments();
         this.startCommentUpdate();
-        this.initSwipeListeners();
         this.initMouseSwipeListeners();
     }
 
@@ -139,57 +139,62 @@ class CommentModule {
         }, 60000);  // Update every 1 minute (60000ms)
     }
 
-    initSwipeListeners() {
-        let startX = 0;
-        let endX = 0;
-
-        // Mobile swipe events
-        this.container.addEventListener('touchstart', (e) => {
-            startX = e.touches[0].clientX;
-        });
-
-        this.container.addEventListener('touchend', (e) => {
-            endX = e.changedTouches[0].clientX;
-            this.handleSwipe(startX, endX);
-        });
-    }
-
     initMouseSwipeListeners() {
         let isMouseDown = false;
         let startX = 0;
+        let endX = 0;
 
-        // Desktop swipe events
+        // Listen for mouse click (start dragging)
         this.container.addEventListener('mousedown', (e) => {
             isMouseDown = true;
             startX = e.clientX;
         });
 
+        // Update comment based on mouse movement
         this.container.addEventListener('mousemove', (e) => {
             if (isMouseDown) {
-                const endX = e.clientX;
-                this.handleSwipe(startX, endX);
-                startX = endX; // Reset the startX for smooth movement
+                endX = e.clientX;
+                this.handleDrag(startX, endX);
             }
         });
 
+        // On mouse release, change to next/prev comment based on swipe direction
         this.container.addEventListener('mouseup', () => {
             isMouseDown = false;
+            this.handleDragEnd(startX, endX);
         });
 
+        // In case mouse leaves the area while dragging
         this.container.addEventListener('mouseleave', () => {
-            isMouseDown = false; // In case mouse leaves the area while dragging
+            isMouseDown = false;
+            this.handleDragEnd(startX, endX);
         });
     }
 
-    handleSwipe(startX, endX) {
-        const swipeThreshold = 50;
+    handleDrag(startX, endX) {
+        const swipeThreshold = 100;  // Increase threshold to make the drag more deliberate
+        const swipeDistance = endX - startX;
+
+        // Move comment smoothly with drag
+        if (Math.abs(swipeDistance) > swipeThreshold) {
+            if (swipeDistance > 0) {
+                this.prevComment();  // Drag right to go to the previous comment
+            } else {
+                this.nextComment();  // Drag left to go to the next comment
+            }
+        }
+    }
+
+    handleDragEnd(startX, endX) {
+        // After drag ends, transition smoothly to next/prev based on distance
+        const swipeThreshold = 100;
         const swipeDistance = endX - startX;
 
         if (Math.abs(swipeDistance) > swipeThreshold) {
             if (swipeDistance > 0) {
-                this.prevComment();  // Swipe right to go to the previous comment
+                this.prevComment();  // Drag right to go to the previous comment
             } else {
-                this.nextComment();  // Swipe left to go to the next comment
+                this.nextComment();  // Drag left to go to the next comment
             }
         }
     }

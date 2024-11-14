@@ -183,6 +183,19 @@ code for comment section
 }
 
 /* Individual Comment Style */
+
+.comment-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    border-top: 2px solid black;
+}
+
+.comment-info { padding: 10px; font-size: 20px;}
+
 .comment {
     display: none; /* Initially hide all comments */
     opacity: 0;

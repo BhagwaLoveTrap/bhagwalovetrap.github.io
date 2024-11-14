@@ -98,7 +98,7 @@ class CommentModule {
         this.currentComment = 0;
         this.createComments();
         this.startCommentUpdate();
-        this.initMouseSwipeListeners();
+        this.initSwipeListeners();
     }
 
     createComments() {
@@ -139,18 +139,18 @@ class CommentModule {
         }, 60000);  // Update every 1 minute (60000ms)
     }
 
-    initMouseSwipeListeners() {
+    initSwipeListeners() {
         let isMouseDown = false;
+        let isTouchStart = false;
         let startX = 0;
         let endX = 0;
 
-        // Listen for mouse click (start dragging)
+        // Mouse swipe listeners
         this.container.addEventListener('mousedown', (e) => {
             isMouseDown = true;
             startX = e.clientX;
         });
 
-        // Update comment based on mouse movement
         this.container.addEventListener('mousemove', (e) => {
             if (isMouseDown) {
                 endX = e.clientX;
@@ -158,15 +158,36 @@ class CommentModule {
             }
         });
 
-        // On mouse release, change to next/prev comment based on swipe direction
         this.container.addEventListener('mouseup', () => {
             isMouseDown = false;
             this.handleDragEnd(startX, endX);
         });
 
-        // In case mouse leaves the area while dragging
         this.container.addEventListener('mouseleave', () => {
             isMouseDown = false;
+            this.handleDragEnd(startX, endX);
+        });
+
+        // Touch swipe listeners for mobile devices
+        this.container.addEventListener('touchstart', (e) => {
+            isTouchStart = true;
+            startX = e.touches[0].clientX;
+        });
+
+        this.container.addEventListener('touchmove', (e) => {
+            if (isTouchStart) {
+                endX = e.touches[0].clientX;
+                this.handleDrag(startX, endX);
+            }
+        });
+
+        this.container.addEventListener('touchend', () => {
+            isTouchStart = false;
+            this.handleDragEnd(startX, endX);
+        });
+
+        this.container.addEventListener('touchcancel', () => {
+            isTouchStart = false;
             this.handleDragEnd(startX, endX);
         });
     }
